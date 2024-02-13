@@ -3,32 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Encriptaor de texto</title>
+    <title>Encriptador de texto</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     
 </head>
 <body>
-<div class="contenedor">
-    <div class="encriptar">
-        <textarea name="texto" class="texto" id="texto" cols="30" rows="10" placeholder="Ingresa el texto aquí ... "></textarea>    
-        <div class="terminos">
-            <p>Sólo se admiten letras mínusculas y sin acentos.</p>
+    <header>
+        <img id="imgLogo" class="imgLogo" src="img/Logo.png" alt="Logo Alura">
+    </header>
+    <main>
+        <div class="seccionUno">
+            <textarea name="texto" id="textoIngresado" class="textoIngresado"30" rows="10" placeholder="Ingrese el texto aquí"></textarea>
+            <p class="textoCondiciones"> <img src="img/Exclamation.png"> Solo letras minúsculas y sin acentos</p>
+            <div class="botones">
+                <button onclick="encriptar()" id="botonEncriptar" class="botonEncriptar">Encriptar</button>
+                <button onclick="desencriptar()" id="botonDesencriptar" class="botonDesencriptar">Desencriptar</button>
+            </div>            
         </div>
-        <div class="botones">
-            <button class="botonEncriptar" onclick="encriptar()">Encriptar</button>
-            <button class="botonDesencriptar" onclick="desencriptar()">Desencriptar</button>
+        <div class="secccionDos">            
+            <img class="imgMuñeco"  src="img/Muñeco.png" id="imgMuñeco" alt="muñeco">
+            <div class="mensajeInicial">
+                <h2>Ningún mensaje fue encontrado</h2>
+                <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>
+            <p class="textoEncriptado"  id="textoEncriptado"></p>
+            <button class="botonOculto"  onclick="copiar()">Copiar</button>
         </div>
-    </div>
-    <div class="encriptado">
-        <img src="" alt="" id="imagen">
-        <div class="mensajeEncriptado" id="mensajeEncriptado">
-            <h2 id="tituloMensaje">Ningún mensaje fué encontrado</h2>
-            <p>Ingresa el texto que desea Encriptar o Desencriptar.</p>
-            <textarea name="mensaje" id="mensaje" cols="30" rows="10" class="mensaje"></textarea>
-        </div>
-    </div>
-</div>
+    </main>
 
+    <footer>
+        <p>John Ferney Espinoza González  Copyright 2024©</p>        
+    </footer>
 </body>
 <script src="script.js"></script>
 </html>
